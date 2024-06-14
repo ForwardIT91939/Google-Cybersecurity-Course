@@ -20,3 +20,6 @@ Through these lessons I was able to learn about:
 - A brief summary of SIEM Tools (Chronicle and Splunk)
 - Foundational knowledge on SQL
 - Network Protocol Analyzers (TCPDUMP)
+
+
+This is currently unfinished and will be continously updated throughout the duration of the course
