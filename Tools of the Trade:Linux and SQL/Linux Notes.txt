@@ -25,3 +25,11 @@ ksh and bash - $
 zsh - %
 
 Bash = default shell in most Linux distributions
+
+Standard input - information received by OS via command line
+echo - Linux command that outputs string
+String - ordered sequence of characters (like a sentence or word)
+
+asdfasdf@sdlkafaslkdjf:-$ echo hello - [enter]
+output = echo 
+  - this is basically print ("hello world") - (Python)
