@@ -1,0 +1,25 @@
+Filter with Grep
+Disregard "- [enter]" this is for me to remember to press enter
+----------------------
+First Task - Search for error messages in a log file
+  - Navigate to the /home/analyst/logs directory.
+    cd logs - [enter]
+  - Use grep to filter the server_logs.txt file, and return all lines containing the text string error.
+    cat server_logs.txt | grep error - [enter]
+----------------------
+Second Task - Find files containing specific strings
+  - Navigate to the /home/analyst/reports/users directory
+    cd /home/analyst/reports/users - [enter]
+  - Using the pipe character (|), pipe the output of the ls command to the grep command to list only the files containing the string Q1 in their names
+    ls | grep Q1 - [enter]
+  - List the files that contain the word access in their names
+    ls | grep access - [enter]
+----------------------
+Third Task - Search more file contents
+  - Display the files in the /home/analyst/reports/users directory
+    pwd - [enter]
+    ls - [enter]
+  - Search the Q2_deleted_users.txt file for the username jhill
+    cat Q2_deleted_users.txt | grep jhill - [enter]
+  - Search the Q4_added_users.txt file to list the users who were added to the Human Resources department
+    cat Q4_added_users.txt | grep "Human Resources" - [enter]
