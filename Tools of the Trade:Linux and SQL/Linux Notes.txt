@@ -10,3 +10,18 @@ Debian - dpkg = .deb
 
 Advanced Package Tool (APT) - Debian Distro - Command-line interface to manage, search and install packages
 Yellowdog Updator Modified (YUM) - Red Hat Distro - command-line interface to manage, search, and install packages (.rpm)
+
+Shell - command-line interperter = shell executes many internal processes to interpret your command
+There are different types of shells just like different types of linux distros:
+
+Bourne-Again Shell (bash)
+C-Shell (csh)
+Korn Shell (ksh)
+Enhanced C Shell (tcsh)
+Z Shell (zsh)
+
+Linux Shells use Linux Commands but they differ in features
+ksh and bash - $
+zsh - %
+
+Bash = default shell in most Linux distributions
