@@ -1,4 +1,4 @@
-Linux Notes
+Linux Bash Notes
 
 Linux has many distrubutions - each distribution comes from a parent distro
 Kali, Ubuntu, and Parot - Debian
