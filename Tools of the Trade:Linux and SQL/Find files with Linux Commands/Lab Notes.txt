@@ -1,1 +1,27 @@
+Find Files with linux commands
+Disregard "- [enter]" this is for me to remember to press enter button
 
+First Task - Get the current directory information
+  - Which directory is your current working directory?
+    pwd - [enter]
+  - How many directories does the current working directory contain?
+    ls - [enter]
+Second Task - Change directory and list the subdirectories
+  - Navigate to the /home/analyst/reports directory
+    cd reports - [enter]
+  - What is the name of the subdirectory in the /home/analyst/reports directory
+    ls - [enter]
+Third Task - Locate and read the contents of a file
+  - Navigate to the /home/analyst/reports/users directory
+  cd users - [enter]
+  - List the files in the current directory
+    ls - [enter]
+  - Display contents of the .txt file
+    cat .txt - [enter]
+Fourth Task - Navigate to a directory and locate a file
+  - Navigate to the /home/analyst/logs directory
+    cd logs - [enter]
+  - Display the name of the file it contains
+    ls
+  - Display the first 10 lines of this file
+    head .txt - [enter]
