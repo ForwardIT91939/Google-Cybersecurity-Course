@@ -3,29 +3,29 @@ Linux Notes
 Linux has many distrubutions - each distribution comes from a parent distro
 Kali, Ubuntu, and Parot - Debian
 CentOS - Redhat
-
+----------------------
 Each distribution has different package managers
 Red Hat - Red Hat Package Manager (RPM) = .rpm
 Debian - dpkg = .deb
-
+----------------------
 Advanced Package Tool (APT) - Debian Distro - Command-line interface to manage, search and install packages
 Yellowdog Updator Modified (YUM) - Red Hat Distro - command-line interface to manage, search, and install packages (.rpm)
-
+----------------------
 Shell - command-line interperter = shell executes many internal processes to interpret your command
 There are different types of shells just like different types of linux distros:
-
+----------------------
 Bourne-Again Shell (bash)
 C-Shell (csh)
 Korn Shell (ksh)
 Enhanced C Shell (tcsh)
 Z Shell (zsh)
-
+----------------------
 Linux Shells use Linux Commands but they differ in features
 ksh and bash - $
 zsh - %
 
 Bash = default shell in most Linux distributions
-
+----------------------
 Standard input - information received by OS via command line
 echo - Linux command that outputs string
 String - ordered sequence of characters (like a sentence or word)
@@ -33,3 +33,35 @@ String - ordered sequence of characters (like a sentence or word)
 asdfasdf@sdlkafaslkdjf:-$ echo hello - [enter]
 output = echo 
   - this is basically print ("hello world") - (Python)
+----------------------
+Filesystem Hirerarchy Standard (FHS)
+Root directory is the highest level directory in Linux - it is represented by a single "/"
+for example: /home/dud
+the first slash represents root 
+then it branches out to a subdirectory called home
+the next "/" represents that it is branching out again
+to the dud subdirectory
+/home - each user in the system gets their own home directory
+/bin - this direcory stands for "binary" and contains binary files and other executables
+  *Executables are files that contain a series of commands a computer needs to follow to run programs and perform other functions
+/etc - this directory stores the system's configuration files
+/tmp - this directory stores many temporary files (Like windows %appdata% temp file)
+/mnt - this directory stands for "mount" and stores media, such as USB drives and hard drives
+
+  *FUNFACT - use man hier command to learn more about FHS
+-----------------------
+pwd - prints the working directory onto the screen
+  *within pwd you can find out the username of user using [whoami] command which displays current user
+ls - (list) displays the names of files and directories in the current working directory
+cd - (change directory) navigates between directories
+  *within cd you can change directories by using [.] for example using [cd..] will bring your file folder one level up in the structure
+cat - displays the content of a file
+head - (when you dont want to display all the content of a file) displays just the beginning of a file, by default 10 lines
+tail - returns/displays the end of a file, by default 10 lines
+less - returns the content of a file one page at a time
+  *With the less command you get several keyboard functions/controls)
+    - [space] - Move forward one page
+    - [b] - Move back one page
+    - [down arrow] - Move forward one line
+    - [up arrow] - Move back one line
+    - [q] - quit and return to previous terminal window
