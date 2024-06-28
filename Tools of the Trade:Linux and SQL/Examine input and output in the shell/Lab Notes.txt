@@ -1,3 +1,30 @@
 Examin input and output in the shell
+Command used in lab - echo, expr, clear
+Disregard: - [enter] (This is for me to remember to press enter after each command)
+-------------------------------------------
+First Task - Generate output with the echo command
 
+echo hello - [enter]
+echo "hello" - [enter]
+  - both should output hello
+The quotation marks are optional - but are useful in cases where you need to pass a sting that contacins certain characters that might be misinterpreted by command
+echo "Name" - [enter]
+-------------------------------------------
+Second Task - Generate output with the expr command
 
+(Mathematical)
+expr 32 - 8 - [enter]
+expr 3500 * 12 - [enter]
+-------------------------------------------
+Third Task - Clear the Bash shell
+
+clear - [enter]
+-------------------------------------------
+Optional Task - Perform more calculations with the expr command
+
+echo hello world - [enter]
+echo "hello world" - [enter]
+Output = hello world
+
+expr 32 * 9 / 4 - [enter]
+Output = 72
