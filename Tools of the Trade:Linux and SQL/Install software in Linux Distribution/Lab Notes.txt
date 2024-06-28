@@ -1,0 +1,31 @@
+Install and Uninstall applications in Linux Bash Shell using - Advanced Package Tool (APT) and Sudo
+Tools also used in lab - Suricata and tcpdump - Network security applications that capture and analyze network traffic
+------------------------------------------------
+First task - Ensure APT is installed
+apt - [enter]
+------------------------------------------------
+Second Task - Install and Uninstall the Suricata Application
+
+sudo apt install suricata - [enter]
+if prompted (Y/n) - [enter] for yes or [y]
+
+sudo apt remove suricata - [enter]
+if promted (Y/n) - [enter]
+  - this should display -bash:/usr/bin/suricata: No such file or directory
+(If done correctly)
+------------------------------------------------
+Third Task - Install tcpdump
+
+sudo apt install tcpdump - [enter]
+------------------------------------------------
+Fourth Task - List the installed applications
+
+apt list --installed - [enter]
+  - this will display all installed apps in alphabetical order
+------------------------------------------------
+Fifth Task - Reinstall the Suricata application
+
+sudo apt install suricata - [enter]
+
+apt list --install - [enter]
+  - this is just to make sure that we have installed suricata again correctly
