@@ -1,0 +1,12 @@
+Linux Notes
+
+Linux has many distrubutions - each distribution comes from a parent distro
+Kali, Ubuntu, and Parot - Debian
+CentOS - Redhat
+
+Each distribution has different package managers
+Red Hat - Red Hat Package Manager (RPM) = .rpm
+Debian - dpkg = .deb
+
+Advanced Package Tool (APT) - Debian Distro - Command-line interface to manage, search and install packages
+Yellowdog Updator Modified (YUM) - Red Hat Distro - command-line interface to manage, search, and install packages (.rpm)
