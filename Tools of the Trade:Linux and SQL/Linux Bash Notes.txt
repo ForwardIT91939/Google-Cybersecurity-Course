@@ -80,3 +80,23 @@ find - find command searches for directories and files that meet specified crite
   *within find you can use this to find certain directories that was modified at a specified time fram 
     - for example if you put -mtime -3 it would search for directories that were last modified within 3 days
 -mmin - can be used instead of -mtime to base the search on minutes rather than days
+-------------------------
+mkdir - Creates a new Directory
+rmdir - Removes, or deletes a directory
+touch - creates new file
+rm - Removes or deletes a file
+mv - moves a file or directory to a new location
+cp - copies a file or directory into a new location
+nano - command-line file editor 
+  *if you would like to open anno you can enter nano followed by the file name
+  *within nano you are able to creat new file by entering nano follwed by a file name
+  *nano has keyboard shortcuts that can assist you - Ctrl + O will save a file | you can also use Ctrl + X to exit out of nano
+-------------------------
+Standard output redirection
+In additon to the pipe (|), you can also use the right angle bracket (>) and double right angle bracket (>>) operators to redirect standard output
+  *example: when used with echo, te > and >> operators can be used to send the output of echo to a specified filerather than the screen.
+  *the difference between > and >> is that > overwrites your existing file, and >> adds your content to the end of the existing file instead of overwriting
+  *example: echo "last updated date" >> permissions.txt - adds the string "last updated date" to the files contents
+  *example: echo "time" > permissions.txt - will overwrite everything in permissions.txt with "time"
+  *Both > and >> operators will create a new file if one doesn't already exist with your specified name
+  
