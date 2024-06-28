@@ -65,3 +65,18 @@ less - returns the content of a file one page at a time
     - [down arrow] - Move forward one line
     - [up arrow] - Move back one line
     - [q] - quit and return to previous terminal window
+-----------------------
+grep - searches a specified file and returns all liines in the file containing a specified string
+| - (piping) sends the standarrd output of one command as standard input to another command for further processing
+  *for example = ls /home/analyst/reports | grep user
+    - The first command ls will list everything within arguemtn (Reports) but instead of outputting that - it is sent to the next line of code because of "|" which is piping the previous command to the next which is grep
+find - find command searches for directories and files that meet specified criteria
+-name or -iname - find a file or diectory names that contain specific string
+  *within find, you can use -name or -iname to find file or directory names that contain a specific string. The spcific string you;re searching for must be entered in quotes
+    - the difference between -name and -iname is that -name is case senstive and -iname is not
+    - An asterick (*) is used as a wildcard to represent zero or more unknown characters 
+      - for example "*log*" - find /home/analyst/projects -iname "*log*
+-mtime - find files or directories last modified at a certain time frame
+  *within find you can use this to find certain directories that was modified at a specified time fram 
+    - for example if you put -mtime -3 it would search for directories that were last modified within 3 days
+-mmin - can be used instead of -mtime to base the search on minutes rather than days
