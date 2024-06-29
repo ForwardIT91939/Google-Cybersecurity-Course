@@ -1,1 +1,30 @@
-
+Manage Authorization
+Ignore " - [enter]" this is for me to remember to press enter
+------------------------------
+First Task - Check file and directory details
+  - Navigate to the projects directory
+    cd projects - [enter]
+  - List the contents and permissions of the projects directory
+    ls -la - [enter]
+  - Check whether any hidden files exist in the projects directory.
+    la -a - [enter]
+------------------------------
+Second Task - Change file permissions
+  - Check whether any files in the projects directory have write permissions for the owner type of other.
+    ls -l - [enter]
+  - Change the permissions of the file identified in the previous step so that the owner type of other doesn’t have write permissions.
+    chmod o-w project_k.txt - [enter]
+  - Use the chmod command to change permissions of the project_m.txt file so that the group doesn’t have read or write permissions.
+    chmod g-rw project_m.txt - [enter]
+------------------------------
+Third Task - Change file permissions on a hidden file
+  - Check the permissions of the hidden file .project_x.txt and answer the question that follows.
+    ls -l .project_x.txt - [enter]
+  - Change the permissions of the file .project_x.txt so that both the user and the group can read, but not write to, the file.
+    chmod u-w,g-w,g+r .project_x.txt - [enter]
+------------------------------
+Fourth Task - Change directory permissions
+  - Check the group permissions of the /home/researcher2/projects/drafts directory 
+    ls -la or ls -l drafts
+  - Remove the execute permission for the group from the drafts directory
+    chmod g-x drafts - [enter]
