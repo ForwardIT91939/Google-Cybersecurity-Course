@@ -1,0 +1,52 @@
+Manage files with Linux commands
+Ignore " - [enter]" this is for me to remember to press enter
+----------------------------
+First Task - Create a new Directory
+  - Create a new subdirectory called logs in the /home/analyst directory.
+    mdir logs - [enter]
+  - List the contents of the /home/analyst directory to confirm that you’ve successfully created the new logs subdirectory.
+    ls - [enter]
+----------------------------
+Second Task - Remove a directory
+  - Remove the /home/analyst/temp directory.
+    rmdir temp - [enter]
+  - List the contents of the /home/analyst directory to confirm that you have removed the temp subdirectory.
+    ls - [enter]
+----------------------------
+Third Task - Move a file
+  - Navigate to the /home/analyst/notes directory
+    cd /home/analyst/notes - [enter]
+  - Move the Q3patches.txt file from the /home/analyst/notes directory to the /home/analyst/reports directory.
+    mv Q3patches.txt /home/analyst/reports - [enter]
+  - List the contents of the /home/analyst/reports directory to confirm that you have moved the file successfully.
+    cd /home/analyst/reports - [enter]
+    ls - [enter]
+----------------------------
+Fourth Task - Remove a file
+  - Remove the tempnotes.txt file from the /home/analyst/notes directory.
+    cd /home/analyst/notes - [enter]
+    rm tempnotes.txt - [enter]
+  - List the contents of the /home/analyst/notes directory to confirm that you’ve removed the file successfully.
+    ls - [enter]
+----------------------------
+Fifth Task - Create a new file
+  - Use the touch command to create an empty file called tasks.txt in the /home/analyst/notes directory.
+    touch tasks.txt - [enter]
+  - List the contents of the /home/analyst/notes directory to confirm that you have created a new file.
+    ls - [enter]
+----------------------------
+Sixth Task - Edit a file
+  - Using the nano text editor, open the tasks.txt file that is located in the /home/analyst/notes directory.
+    nano tasks.txt - [enter]
+  - Copy and paste the following text into the text input area of the nano editor: 
+    [Completed tasks 1. Managed file structure in /home/analyst]
+    CTRL + C and CTRL + V - [enter]
+  - Press CTRL+X to exit the nano text editor.
+    CTRL + X - [enter]
+  - Press ENTER to confirm that File Name to Write is tasks.txt
+    Note: The recommended sequence of commands for saving a file with the nano text editor is to use CTRL+O to tell nano to save the file and then use CTRL+X to exit immediately.
+    ENTER - [enter]
+  - Use the clear command to clear the Bash shell window and remove any traces of the nano text input area.
+    clear - [enter]
+  - Display the contents of the tasks.txt file to confirm that it contains the updated task details.
+    cat tasks.txt - [enter]
