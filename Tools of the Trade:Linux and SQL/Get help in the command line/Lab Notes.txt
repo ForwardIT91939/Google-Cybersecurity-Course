@@ -1,0 +1,32 @@
+Get help in the command line
+Ignore [ - enter] this is for me 
+--------------------------------
+Baseline Information:
+As a security analyst, I will have to find more information about commands that I will need to use
+To discover which command to use to perform certain tasks
+I will need:
+  - explore a few commands I can use in the shell to learn more about other commands
+  - find an option you need to add to a command
+  - use a command to get a brief description of commands so I can identify their differences
+  - identify the command I need to perform a task
+--------------------------------
+First Task - Learn more about commands
+  - Run the whatis command to get a short description of cat
+    whatis cat - [enter]
+  - Use the man command to get more details about cat
+    man cat - [enter]
+  - Use apropos to find a command that returns the first part of a file (apropos -a first part file)
+    apropos -a first part file - [enter]
+--------------------------------
+Second Task - Explore the useradd command
+  - Use the most appropriate Linux command to get help on the useradd command and learn more about all of its options
+    man useradd - [enter]
+--------------------------------
+Third Task - Explore the rm and rmdir commands
+  - Use the most appropriate Linux command to quickly remind yourself what each command does (rm and rmdir)
+    whatis rm - [enter]
+    whatis rmdir - [enter]
+--------------------------------
+Fourth Task - Determine which command to use
+  - Use the most appropriate Linux command with these keywords to identify what command to use (Create a new group)
+    apropos -a create a new group - [enter]
