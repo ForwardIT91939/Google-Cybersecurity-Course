@@ -171,3 +171,10 @@ Using [-a] with [-G] will ensure that the new groups are added but existing grou
 chown - a command changes ownership of a file or directory. Can be used to change user or group ownership
   * Example - [sudo chown batman access.txt] - this will change user owner of file "access.txt"
   * Example - [sudo chown :security access.txt] - To change group owner of access.txt to security, a colon [:] must be used before group name (in this case security)
+--------------------------
+man - (derived from Manual) displays information on other commands and how they work
+whatis - displays a description of a command on a single line
+apropos - searches the manual page descriptions for a specified string
+  * [-a] option will help filter results with specified strings
+  * Example - [apropos -a change password] - this will display 2 commands that will help you change password
+
