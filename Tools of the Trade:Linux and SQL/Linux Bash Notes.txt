@@ -134,3 +134,14 @@ example* chmod g+w.o-r access.txt
   ^example above shows that we are going to make changes in permissions for (usertype) groups and others
   group will gain write
   other will lose read
+--------------------------
+Root - A user with elevated privileges to modify the system
+Root account is the most powerful account... you wouldnt want to be running linux with root often
+  *This can lead to many problems such as:
+    - Security risks: Malicious actors will try to breach into root accounts due to its powerful capabilites
+    - Irreversible Mistakes: its very east to type the wrong command in the CLI, running in root you will have a higer risk of making irreversible mistake
+    - Accountability: In a multi-user environment there will be many users. If a user is running as root, there is no way to rack who exactly ran a command
+  *Thats where sudo comes in
+Sudo - A command that temporarily grants elevated permissions to specific users
+useradd - A command that adds users (ONLY root and sudo privileges can use useradd command)
+userdel - A command that deletes users (ONLY root and sudo privileges can use userdel command)
