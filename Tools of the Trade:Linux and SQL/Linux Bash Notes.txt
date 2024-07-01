@@ -143,5 +143,31 @@ Root account is the most powerful account... you wouldnt want to be running linu
     - Accountability: In a multi-user environment there will be many users. If a user is running as root, there is no way to rack who exactly ran a command
   *Thats where sudo comes in
 Sudo - A command that temporarily grants elevated permissions to specific users
+  *Must be given access to user in configuration file (sudoers file)
+
 useradd - A command that adds users (ONLY root and sudo privileges can use useradd command)
+  * [-g] command sets the user's default group, also called thei primary group
+  * - Example: [sudo useradd -g security batman] This adds "batman" as a new user and assigns their primary group to be security
+  * [-G] comman adds the user to additional groups, also called supplemental or secondary groups
+  * - Example: [sudo useradd -G finance,admin joker] This adds joker as a new user and adds them to the existing finance and admin groups
+
 userdel - A command that deletes users (ONLY root and sudo privileges can use userdel command)
+  * [-r] command is used to delete the files in the user's home directory. It will not delete unless -r option is used. 
+  * - Example: [sudo userdel -r batman] would delete batman as a user and delete all files in their home directory.
+  *Instead of deleting the user, you can dieactivate their accoun with [usermod -L]
+
+usermod - A command that modifies existing user accounts. The same -g and -G options from the useradd command can be used with usermod if a user already exists
+NOTE: In addition to [-G] command you would also need [-a] option which apends the user to an existing group and is only used with the [-G] option.
+  * - Example: [sudo usermod -g executve batman] would change batman's primary group to the executive group
+  * - Example: [sudo usermod -a -G marketing joker] would add the existing joker to the supplemental marketing group
+When changing the supplemental group of an existing user, if you dont include the [-a] option, [-G] will replace any existing supplemental groups with the groups specified after usermod.
+Using [-a] with [-G] will ensure that the new groups are added but existing groups are not replaced.
+  * There are other options you can use with usermod to specify how you want to modify the user:
+    * [-d] - changes the user's home directory
+    * [-l] - changes the user's login name
+    * [-L] Locks the account so the user cant login
+  The option always goes after the usermod command. For example, to change batman's home directory to /home/batcave_r, enter [sudo usermod -d /home/batcave_r batman]
+
+chown - a command changes ownership of a file or directory. Can be used to change user or group ownership
+  * Example - [sudo chown batman access.txt] - this will change user owner of file "access.txt"
+  * Example - [sudo chown :security access.txt] - To change group owner of access.txt to security, a colon [:] must be used before group name (in this case security)
