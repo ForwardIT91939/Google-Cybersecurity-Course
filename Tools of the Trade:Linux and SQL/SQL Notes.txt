@@ -5,6 +5,8 @@ SQL Queries
 SQL Filters
 SQL Joins
 ----------------------------
+SQL - (Structured Query Language) A programming language used to creat, interact with, and request information from a database
+
 Database - An organized collection of information or data
 Databases:
   - Accessed by multiple people
@@ -12,5 +14,35 @@ Databases:
   - Perform complex tasks while accessing data
 
 Primary Key: A column where every row has a unique entry
+Foreign Key: A column in a table that is a primary key in another table 
+
+Query - A request for data from a database table or a combination of tables
+
+Log - A record of events that occur within an organization's systems
+-----------------------------
+SQL Filtering versus Linux Filtering
+
+Accessing SQL - there many interfaces for accessing SQL as well as many different versions of SQL. One way to access SQL is through Linux Command Line
+  * To access SQL from linux, you need to type ina command for the version of SQL. To access SQLite [sqlite3] command will be used
+  * Once the command is entered, all commands thereafter will be directed to SQL instead Linux command
+
+Differences:
+  - [Linux] filters data in the contezt of files and directories on a computer system
+    * Its main function is to searching for files, manipulating file permissions, or managing processes
+    * Syntax - linux uses various commands and command-line options sepcific to each filtering tool. Syntax varies depending on the tool and purpose
+      - Example: find, sed, cut, e grep
+    * Sturcture - Linux is more free-form and not as tidy, for example: if you wanted to access a log of employee log-in attempts, Linux would print the data as a line of text withoug organization
+    * Joining Tables - Linux does not have this funtionality making it difficult to allow data to be connected to other information on the computer
+
+
+  - [SQL] is used to filter data within a database management system.
+    * Its main function is used for querying and manipulating data stored in tables and retrieving specific information
+    * Syntax - SQL uses the Structured Query Language, a standardized language with specific keywords and clauses for filtering data across different SQL databases.
+      - Example: WHERE, SELECT, JOIN
+    * Structure - Offers more structure, for example: if you wanted to access a log of employee log-in attempts, SQL would have each record separated into columns.
+      SQL provides results that are more easily readable and that can be adjusted more quickly than when using Linux
+    * Joining Tables - Security-related decsions require information form different tables. SQL allows to join multiple tables together when returning data
+  
+
 
 
