@@ -1,1 +1,16 @@
+SQL Notes:
+----------------------------
+Relational Database
+SQL Queries
+SQL Filters
+SQL Joins
+----------------------------
+Database - An organized collection of information or data
+Databases:
+  - Accessed by multiple people
+  - Store massive amounts of data
+  - Perform complex tasks while accessing data
+
+Primary Key: A column where every row has a unique entry
+
 
