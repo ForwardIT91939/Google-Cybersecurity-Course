@@ -1,0 +1,41 @@
+Perform a SQL Query
+--------------------------------------------
+Baseline Information:
+In this lab, you’ll learn how to retrieve information from a database using SQL. You’ll be using the MariaDB shell to run your SQL queries.
+You have to determine which employee devices must be updated. You also need to investigate user login activity to explore if any unusual activity has occurred.
+The information you need is located in the machines and login_attempts tables in the organization database
+
+Tasks - 
+  1) Return informatio on employee devices
+  2) Examine login attempts
+  3) Sort the data returned froma query
+--------------------------------------------
+First Task - Retrieve employee device data
+  - Run the following query to select all device information from the machines table
+    SELECT *
+    FROM machines;
+  - Run the following query to select only the device_id and email_client columns from the machines table. Replace X with device_id and Y with email_client:
+    SELECT device_id, email_client FROM machines;
+  - Complete the query to return only the device_id, operating_system, and OS_patch_date columns from the machines table. Replace X, Y, and Z with the columns that you need to return
+    SELECT device_id, operating_system, OS_patch_date FROM machines;
+--------------------------------------------
+Second Task - Investigate login activity
+  - Write a SQL query to select the event_id and country columns from the log_in_attempts table
+    SELECT event_id, country
+    FROM log_in_attempts;
+  - Write a SQL query that selects the username, login_date, and login_time columns from the log_in_attempts table
+    SELECT username, login_date, login_time
+    FROM log_in_attempts;
+  - Write a SQL query that selects all columns from the log_in_attempts table, using a single symbol after the SELECT keyword
+    SELECT *
+    FROM log_in_attempts;
+--------------------------------------------
+Third Task - Order login attempts data
+  - Run the following query, which orders log_in_attempts data by login_date
+    SELECT *
+    FROM log_in_attempts
+    ORDER BY login_date;
+  - Modify the query from the previous step by adding the login time to the ORDER BY clause. You must replace X with the appropriate column name
+    SELECT * 
+    FROM log_in_attempts
+    ORDER BY login_date, login_time;
