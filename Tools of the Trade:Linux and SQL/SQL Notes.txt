@@ -42,7 +42,127 @@ Differences:
     * Structure - Offers more structure, for example: if you wanted to access a log of employee log-in attempts, SQL would have each record separated into columns.
       SQL provides results that are more easily readable and that can be adjusted more quickly than when using Linux
     * Joining Tables - Security-related decsions require information form different tables. SQL allows to join multiple tables together when returning data
-  
+  -----------------------------
+SQL Keywords - SQL Queries:
 
+SELECT - Indicates which columns to return
+FROM - Indicates which table to query
 
+Syntax - The rules that determine what is correctly structured in a computing language
 
+SELECT * - Instructs SQL to return all columns from the specified table (Commonly known as "select all") 
+NOTE: Using SELECT * may not be advisable when working with large databases and tables; in those cases, the final output may be difficult to understand and might be slow to run
+
+Chinook (Database) - Database used within Course
+------------------------------------------------------
+ORDER BY - Sequences the records returned by a query based on a specified column or coloumns. This can be in either ascending or descending order
+  * Ascending order - Using ORDER BY at the end of the query will order the table in ascending order - however, if you place ORDER BY followed by an arguement, it will sory in alphabetical order or numerically
+    within that column
+Example: 
+SELECT customerid, city, country
+FROM customers
+ORDER BY city;
+
++------------+--------------+----------------+
+| CustomerId | City         | Country        |
++------------+--------------+----------------+
+|         48 | Amsterdam    | Netherlands    |
+|         59 | Bangalore    | India          |
+|         36 | Berlin       | Germany        |
+|         38 | Berlin       | Germany        |
+|         42 | Bordeaux     | France         |
+|         23 | Boston       | USA            |
+|         13 | Brasília     | Brazil         |
+|          8 | Brussels     | Belgium        |
+|         45 | Budapest     | Hungary        |
+|         56 | Buenos Aires | Argentina      |
+|         24 | Chicago      | USA            |
+|          9 | Copenhagen   | Denmark        |
+|         19 | Cupertino    | USA            |
+|         58 | Delhi        | India          |
+|         43 | Dijon        | France         |
+|         46 | Dublin       | Ireland        |
+|         54 | Edinburgh    | United Kingdom |
+|         14 | Edmonton     | Canada         |
+|         26 | Fort Worth   | USA            |
+|         37 | Frankfurt    | Germany        |
+|         31 | Halifax      | Canada         |
+|         44 | Helsinki     | Finland        |
+|         34 | Lisbon       | Portugal       |
+|         52 | London       | United Kingdom |
+|         53 | London       | United Kingdom |
++------------+--------------+----------------+
+(Output limit exceeded, 25 of 59 total rows shown)
+------------------------------------------------------
+DESC - you can use the ORDER BY with the DESC keyword to sort in a descending order. The keyword tells SQL to sort numbers from largest to smallest, or alphabetically from Z to A. 
+Example:
+SELECT customerid, city, country
+FROM customers
+ORDER BY city DESC;
+
++------------+---------------------+----------------+
+| CustomerId | City                | Country        |
++------------+---------------------+----------------+
+|         33 | Yellowknife         | Canada         |
+|         32 | Winnipeg            | Canada         |
+|         49 | Warsaw              | Poland         |
+|          7 | Vienne              | Austria        |
+|         15 | Vancouver           | Canada         |
+|         27 | Tucson              | USA            |
+|         29 | Toronto             | Canada         |
+|         10 | São Paulo           | Brazil         |
+|         11 | São Paulo           | Brazil         |
+|          1 | São José dos Campos | Brazil         |
+|          2 | Stuttgart           | Germany        |
+|         51 | Stockholm           | Sweden         |
+|         55 | Sidney              | Australia      |
+|         57 | Santiago            | Chile          |
+|         28 | Salt Lake City      | USA            |
+|         47 | Rome                | Italy          |
+|         12 | Rio de Janeiro      | Brazil         |
+|         21 | Reno                | USA            |
+|         17 | Redmond             | USA            |
+|          5 | Prague              | Czech Republic |
+|          6 | Prague              | Czech Republic |
+|         35 | Porto               | Portugal       |
+|         39 | Paris               | France         |
+|         40 | Paris               | France         |
+|         30 | Ottawa              | Canada         |
++------------+---------------------+----------------+
+(Output limit exceeded, 25 of 59 total rows shown)
+------------------------------------------------------
+You can also sort based on multiple columns:
+Example:
+SELECT customerid, city, country
+FROM customers
+ORDER BY country, city;
++------------+---------------------+----------------+
+| CustomerId | City                | Country        |
++------------+---------------------+----------------+
+|         56 | Buenos Aires        | Argentina      |
+|         55 | Sidney              | Australia      |
+|          7 | Vienne              | Austria        |
+|          8 | Brussels            | Belgium        |
+|         13 | Brasília            | Brazil         |
+|         12 | Rio de Janeiro      | Brazil         |
+|          1 | São José dos Campos | Brazil         |
+|         10 | São Paulo           | Brazil         |
+|         11 | São Paulo           | Brazil         |
+|         14 | Edmonton            | Canada         |
+|         31 | Halifax             | Canada         |
+|          3 | Montréal            | Canada         |
+|         30 | Ottawa              | Canada         |
+|         29 | Toronto             | Canada         |
+|         15 | Vancouver           | Canada         |
+|         32 | Winnipeg            | Canada         |
+|         33 | Yellowknife         | Canada         |
+|         57 | Santiago            | Chile          |
+|          5 | Prague              | Czech Republic |
+|          6 | Prague              | Czech Republic |
+|          9 | Copenhagen          | Denmark        |
+|         44 | Helsinki            | Finland        |
+|         42 | Bordeaux            | France         |
+|         43 | Dijon               | France         |
+|         41 | Lyon                | France         |
++------------+---------------------+----------------+
+(Output limit exceeded, 25 of 59 total rows shown)
