@@ -167,4 +167,13 @@ ORDER BY country, city;
 +------------+---------------------+----------------+
 (Output limit exceeded, 25 of 59 total rows shown)
 ------------------------------------------------------
+Operator - A symbol or keyword that represents an operation
+
 WHERE - Indicates the condition for a filter
+  *Example: [WHERE country = 'USA']
+FULL EXAMPLE: SELECT *
+              From log_in_attempts
+              WHERE country = 'USA';
+
+
+
