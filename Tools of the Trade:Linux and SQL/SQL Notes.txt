@@ -174,6 +174,97 @@ WHERE - Indicates the condition for a filter
 FULL EXAMPLE: SELECT *
               From log_in_attempts
               WHERE country = 'USA';
+You can also use filters to find certain patterns
+To do so... use: %
+EXAMPLE: 'East%'
+
+^ you are unable to use [=] when searching for patterns - you must use [LIKE]
+
+LIKE - Used with WHERE to seaarch for a pattern in a column
+  *For example - lets say that the database stores log in attempts with different inconsistencies with US or USA
+  * you would use: SELECT *
+                   FROM log_in_attempts
+                   WHERE country LIKE 'US%';
+
+While using WHERE and LIKE There are multiple wildcards you can use
+1. [_]
+2. [%]
+
+EXAMPLES:
+'a%'
+
+apple123, art, a
+-------------------
+'a_'
+
+as, an, a7
+-------------------
+'a__' 
+
+ant, add, a1c
+-------------------
+'%a'
+
+pizza, Z6ra, a
+-------------------
+'_a'
+
+ma, 1a, Ha
+-------------------
+'%a%'
+
+Again, back, a
+-------------------
+'_a_'
+
+Car, ban, ea7
+------------------------------------------------------
+[WHERE] EXAMPLES:
+
+SELECT firstname, lastname, title, email
+FROM employees
+WHERE title = 'IT Staff';
+
++-----------+----------+----------+------------------------+
+| FirstName | LastName | Title    | Email                  |
++-----------+----------+----------+------------------------+
+| Robert    | King     | IT Staff | robert@chinookcorp.com |
+| Laura     | Callahan | IT Staff | laura@chinookcorp.com  |
++-----------+----------+----------+------------------------+
+
+-------------------
+SELECT lastname, firstname, title, email
+FROM employees
+WHERE title LIKE 'IT%';
+
++----------+-----------+------------+-------------------------+
+| LastName | FirstName | Title      | Email                   |
++----------+-----------+------------+-------------------------+
+| Mitchell | Michael   | IT Manager | michael@chinookcorp.com |
+| King     | Robert    | IT Staff   | robert@chinookcorp.com  |
+| Callahan | Laura     | IT Staff   | laura@chinookcorp.com   |
++----------+-----------+------------+-------------------------+
+
+-------------------
+SELECT firstname,lastname, state, country
+FROM customers
+WHERE state LIKE 'N_';
+
++-----------+----------+-------+---------+
+| FirstName | LastName | State | Country |
++-----------+----------+-------+---------+
+| Michelle  | Brooks   | NY    | USA     |
+| Kathy     | Chase    | NV    | USA     |
+| Martha    | Silk     | NS    | Canada  |
+| Ellie     | Sullivan | NT    | Canada  |
++-----------+----------+-------+---------+
+
+
+
+
+
+
+
 
 
 
