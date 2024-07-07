@@ -166,3 +166,5 @@ ORDER BY country, city;
 |         41 | Lyon                | France         |
 +------------+---------------------+----------------+
 (Output limit exceeded, 25 of 59 total rows shown)
+------------------------------------------------------
+WHERE - Indicates the condition for a filter
