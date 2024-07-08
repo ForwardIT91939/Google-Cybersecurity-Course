@@ -1,0 +1,54 @@
+Apply more filters in SQL
+----------------------------
+Baseline Information:
+You’re investigating a recent security incident.
+You need to gather information about login attempts for certain dates and times. This will help in resolving a security incident.
+
+Tasks:
+- retrieve login events made after a certain date.
+- narrow the focus of the search to filter logins in a date range.
+- investigate logins that were made at certain times.
+- filter login attempts based on their event IDs.
+----------------------------
+First Task - Retrieve login attempts after a certain date
+  - Complete the SQL query to retrieve data for login attempts made after '2022-05-09'. Replace X with the correct operator:
+    SELECT * 
+    FROM log_in_attempts 
+    WHERE login_date > '2022-05-09';
+  
+  - Complete the SQL query to retrieve data for login attempts that were made on or after '2022-05-09'. Replace X with the correct operator:
+    SELECT * 
+    FROM log_in_attempts 
+    WHERE login_date >= '2022-05-09';  
+----------------------------
+Second Task - Retrieve logins in a date range
+  - Run the query to retrieve the required records. You must insert the required dates X and Y:
+    SELECT * 
+    FROM log_in_attempts 
+    WHERE login_date BETWEEN '2022-05-09' AND '2022-05-11';
+----------------------------  
+Third Task - Investigate logins at certain times
+  - Write a SQL query to retrieve data for login attempts made before '07:00:00'
+    SELECT *
+    FROM log_in_attempts
+    WHERE login_time < '07:00:00';
+
+  - Modify the query to return logins between '06:00:00' and '07:00:00'.
+    SELECT *
+    FROM log_in_attempts
+    WHERE login_time BETWEEN '06:00:00' AND '07:00:00';
+---------------------------- 
+Fourth Task - Investigate logins by event ID
+(You need to investigate login attempts based on event ID numbers. With this query, you want to return only the event_id, username, and login_date fields from the log_in_attempts table.)
+  - Write a query to return login attempts with event_id greater than or equal to 100.
+    SELECT event_id, username, login_date
+    FROM log_in_attempts
+    WHERE event_id >= 100;
+    
+  - Modify the query to return only login attempts with event_id between 100 and 150.
+    SELECT event_id, username, login_date
+    FROM log_in_attempts
+    WHERE event_id BETWEEN 100 AND 150;
+
+
+
