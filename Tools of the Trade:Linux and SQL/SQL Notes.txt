@@ -400,10 +400,48 @@ NOT - Negates a condition
 
 ------------------------------------------------------
 
+SQL Joins
 
+Example - Let's say that there are employee_id column in 2 different tables (employee and machine)
+          In SQL statements that contain two columns, SQL needs to know which column we're referring to. 
+          This is done by: writing the name of the table first, then a period, and then the name of a column.
 
+          employees.employee_id
+OR 
+          machines.employee_id
+-------------------
+INNER JOINS - Returns rows matching on a specified column that exists in more than one table
+NULL - (Value) Any NULL value represents a missing value due to any reason. 
 
+*EXAMPLE: 
+SELECT username, office, operating_system
+FROM employees
+INNER JOIN machines ON employees.employee_id = machines.employee_id;
 
+-------------------
+OUTER JOINS - In some situations, we might need all of the entries from one or both of our tables
+Types of outer joins:
+(Just like INNER JOINS - you would use the same syntax but with different joins)
+
+LEFT JOIN - Returns all of the records of the first table, but only returns rows of the seconf table that match on a specified column
+*EXAMPLE: 
+SELECT username, office, operating_system
+FROM employees
+LEFT JOIN machines ON employees.employee_id = machines.employee_id;
+
+RIGHT JOIN - Returns all of the records of the second table, but only returns rows from the first table that match on a specified column
+*EXAMPLE: 
+SELECT username, office, operating_system
+FROM employees
+RIGHT JOIN machines ON employees.employee_id = machines.employee_id;
+
+FULL OUTER JOIN - Returns all records from both tables
+*EXAMPLE: 
+SELECT username, office, operating_system
+FROM employees
+FULL OUTER JOIN machines ON employees.employee_id = machines.employee_id;
+
+-------------------
 
 
 
