@@ -1,0 +1,45 @@
+Complete a SQL Join
+-------------------------
+Baseline Information:
+In this scenario, you’ll investigate a recent security incident that compromised some machines.
+You are responsible for getting the required information from the database for the investigation.
+
+Tasks:
+  - Use an inner join to identify which employees are using which machines
+  - Use left and right joins to find machines that do not belong to any specific user 
+    and users who do not have any specific machine assigned to them
+  - Use an inner join to list all login attempts made by all employees.
+-------------------------
+First Task - Match employees to their machines
+  - Run the following query to retrieve all records from the machines table:
+    SELECT * 
+    FROM machines;
+
+  - Complete the query to perform an inner join between the machines and employees tables on the device_id column. 
+    SELECT * 
+    FROM machines 
+    INNER JOIN employees ON machines.device_id = employees.device_id;
+-------------------------
+Second Task - Return more data
+  - Run the following SQL query to connect the machines and employees tables through a left join. 
+    SELECT * 
+    FROM machines 
+    LEFT JOIN employees ON machines.device_id = employees.device_id;
+
+  - Run the following SQL query to connect the machines and employees tables through a right join.
+    SELECT * 
+    FROM machines
+    RIGHT JOIN employees ON machines.device_id = employees.device_id;
+-------------------------
+Third Task - Retrieve login attempt data
+  - Run the following SQL query to perform an inner join on the employees and log_in_attempts tables.
+    SELECT * 
+    FROM employees 
+    INNER JOIN log_in_attempts ON employees.username = log_in_attempts.username;
+
+
+
+
+
+
+
