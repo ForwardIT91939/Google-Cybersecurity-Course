@@ -442,7 +442,13 @@ FROM employees
 FULL OUTER JOIN machines ON employees.employee_id = machines.employee_id;
 
 -------------------
+Aggregate Functions - functions that perform a calculation over multiple date points and return the result of the calculation
 
+COUNT - Returns a single number that represents the number of rows returned from your query
+
+AVG - returns a single number that represents the average of the numerical data in a column
+
+SUM - returns a single number that represents the sum of the numerical data in a column
 
 
 
