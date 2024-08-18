@@ -52,7 +52,10 @@ Task 2 - Compare Hashes
     analyst@4fb6d613b6b0:-$ cmp file1hash file2hash
     file1hash file2hash differ: char1, line 1
 
-
+COMMANDS USED:
+sha256sum = compute hashes
+cat = display 
+cmp = compare hashes 
 
 
 
