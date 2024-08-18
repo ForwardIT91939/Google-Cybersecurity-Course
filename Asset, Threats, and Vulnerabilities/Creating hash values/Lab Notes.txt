@@ -1,0 +1,13 @@
+Activity: Create Hash Values
+----------------------------
+Objective:
+
+In this lab, In this lab, I am tasked to create and evaluate the hash values for two files. 
+Using Linux commands, I will have to calculate the hash of two files and observe any differences in the hashes produced. Then, determine if the files are the same, or different.
+----------------------------
+Tasks:
+- List the contents of the home directory
+- Compare the plain text of the two files presented for hashing
+- Compute the sha256sum hash of the two separate files
+- Compare the hashes provided to identify the differences
+----------------------------
