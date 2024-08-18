@@ -11,3 +11,48 @@ Tasks:
 - Compute the sha256sum hash of the two separate files
 - Compare the hashes provided to identify the differences
 ----------------------------
+Task 1 - Generate hashes for files
+  - Use the ls command to list the contents of the directory
+    ls
+  - Use the cat command to display the contents of the file1.txt file
+    cat file1.txt
+  - Use the cat command to display the contents of the file2.txt file
+    cat file2.txt
+
+  OUTPUT: 
+  analyst@4fb6d613b6b0:-$ cat file1.txt
+  X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+  analyst@4fb6d613b6b0:-$ cat file2.txt
+  X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+
+  - Use the sha256sum command to generate the has of the file1.txt file
+    sha256sum file1.txt
+  - Use the sha256sum command to generate the hash of the file2.txt file
+    sha256sum file2.txt
+
+  OUTPUT:
+  analyst@4fb6d613b6b0:-$ sha256sum file1.txt
+  131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
+  analyst@4fb6d613b6b0:-$ sha256sum file2.txt
+  2558ba9a4cad1e69804ce03aa2a029526179a91a5e38cb723320e83af9ca017b  file2.txt
+----------------------------
+Task 2 - Compare Hashes
+  - Use the sha256sum command to generate the hash of the file1.txt file, and send the output to a new file called file1hash
+    sha256sum file.txt >> file1hash
+  - Use the sha256sum command to generate the hash of the file2.txt file, and send the output to a new file called file2hash
+    sha256sum file2.txt >> file2hash
+  - Use the cat command to display the hash values in the file1hash and file2hash files
+    cat file1hash
+    cat file2hash
+  - Inspect the output and note the difference in the hash values
+    [inspect] - no action needed just read
+  - Use the cmp command to highlight the differences in the file1hash and file2hash files
+    cmp file1hash file2hash
+  - Review the output, which reports the first diffeence beteen the two files
+    analyst@4fb6d613b6b0:-$ cmp file1hash file2hash
+    file1hash file2hash differ: char1, line 1
+
+
+
+
+
