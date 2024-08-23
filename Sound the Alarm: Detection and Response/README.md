@@ -1,1 +1,1 @@
-This folder contains all assignments and portfolio projects done within the Sound the Alarm: Detection and Response Course
+In this folder, you will find all projects and portfolio assignments that were tasked during the Sound the Alarm: Detection and Response Course
