@@ -5,3 +5,75 @@ Tasks:
 2) Examine packet information
 3) Apply display filters
 ------------------------
+Notes:
+No. : The index number of the packet in this packet capture file
+Time: The timestamp of the packet
+Source: The source IP address
+Destination: The destination IP address
+Protocol: The protocol contained in the packet
+Length: The total length of the packet
+Info: Some infomation about the data in the packet (the payload) as interpreted by Wireshark
+------------------------
+1) Explore data with Wireshark
+
+Note:
+[The packet capture file has the Wireshark packet capture file icon, which shows a shark's fin swimming above three rows of binary digits. 
+ The packet capture file has a .pcap file extension that is hidden by default by Windows Explorer and on the desktop view.]
+[Not all the data packets are the same color. Coloring rules are used to provide high-level visual cues to help you quickly classify the different types of data. 
+ Since network packet capture files can contain large amounts of data, you can use coloring rules to quickly identify the data that is relevant to you. 
+ The example packet lists a group of light blue packets that all contain DNS traffic, followed by green packets that contain a mixture of TCP and HTTP protocol traffic.]
+
+What is the protocol of the first packet in the list where the info column starts with the words 'Echo (ping) request'?
+ICMP
+------------------------
+Apply a basic Wireshark filter and inspect a packet
+  - Enter the following filter for traffic associated with a specific IP address
+    ip.addr == 142.250.1.139
+
+What is the TCP destination port of this TCP packet?
+80
+------------------------
+Use filters to select packets
+  - Enter the following filter to select traffic for a specific source IP address only
+    ip.src == 142.250.1.139
+  Note: A filtered list is returned with fewer entries than before. It contains only packets that came from 142.250.1.139
+  - Enter the following filter to select traffic for a specific destination IP address only:
+    ip.dst == 142.250.1.139
+  Note: A filtered list is returned that contains only packets that were sent to 142.250.1.139
+  - Enter the following filter to select traffic to or from a specific Ethernet MAC address
+    eth.addr == 42:01:ac:15:e0:02
+  Note: The MAC address you specified in the filter is listed as either the source or destination address in the expanded Ethernet II subtree
+        The Protocol field in the Internet Protocol Version 4 subtree indicates which IP internal protocol is contained in the packet
+
+What is the protocol contained in the Internet Protocol Version 4 subtree from the first packet related to MAC address 42:01:ac:15:e0:02?
+TCP
+------------------------
+Use filters to explore DNS packets
+  - Enter the following filter to select UDP port 53 traffic. DNS traffic uses UDP port 53, so this will list traffic related to DNS queries and responses only
+    udp.port == 53
+  Note: You’ll notice that the name of the website that was queried is opensource.google.com
+        The Answers data includes the name that was queried (opensource.google.com) and the addresses that are associated with that name
+
+Which of these IP addresses is displayed in the expanded Answers section for the DNS query for opensource.google.com?
+142.250.1.139
+------------------------
+Use filters to explore TCP packets
+  - Enter the following filter to select TCP port 80 traffic. TCP port 80 is the default port that is associated with web traffic
+    tcp.port == 80
+
+What is the Time to Live value of the packet as specified in the Internet Protocol Version 4 subtree?
+64
+
+What is the Frame Length of the packet as specified in the Frame subtree?
+54 Bytes
+
+What is the Header Length of the packet as specified in the Internet Protocol Version 4 subtree?
+20 Bytes
+
+What is the Destination Address as specified in the Internet Protocol Version 4 subtree?
+169.254.169.254
+(im a little confused with this one - It states that the Src is 169.254.169.254 and the Destination is 172.21.224.2)
+
+  - Enter the following filter to select TCP packet data that contains specific text data
+    tcp contains "curl"
+Note: This filters to packets containing web requests made with the curl command in this sample packet capture file
