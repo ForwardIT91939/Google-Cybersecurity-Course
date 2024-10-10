@@ -1,0 +1,7 @@
+Analyze your first packet
+------------------------
+Tasks:
+1) Open a Packet capture file using Wireshark
+2) Examine packet information
+3) Apply display filters
+------------------------
